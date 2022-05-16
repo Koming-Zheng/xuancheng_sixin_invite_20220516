@@ -29,12 +29,7 @@ document.querySelector('#submit').addEventListener('click',() => {
 		return
 	}
 
-	if(validateValue(email.value) == false) {
-		alert('邮箱不能空着');
-		return
-	}
-
-	if (validateEmail(email.value) == false) {
+	if (validateEmail(email.value) == false && validateValue(email.value) == true) {
 		alert('邮箱格式不正确')
 		return
 	}
@@ -52,12 +47,7 @@ document.querySelector('#submit').addEventListener('click',() => {
 
 
 	if(industry.value == '选填以下信息'){
-		alert('请选择所属行业')
-		return
-	}
-
-	if(validateValue(remark.value) == false) {
-		alert('备注不能空着');
+		alert('所属行业不能空着')
 		return
 	}
 
