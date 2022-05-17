@@ -46,7 +46,7 @@ document.querySelector('#submit').addEventListener('click',() => {
 
 
 
-	if(industry.value == '选填以下信息'){
+	if(validateValue(company_profile.value) == false){
 		alert('所属行业不能空着')
 		return
 	}
